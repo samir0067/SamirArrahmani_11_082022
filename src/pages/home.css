@@ -1,0 +1,6 @@
+.container {
+  width: 100%;
+  padding-left: 21px;
+  padding-right: 21px;
+  display: flex;
+}
