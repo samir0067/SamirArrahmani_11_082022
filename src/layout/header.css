@@ -1,0 +1,57 @@
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1240px;
+  margin: 40px 21px;
+}
+
+.logoHeader {
+  width: 210px;
+  height: 68px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 309px;
+}
+
+nav > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.liHome {
+  width: 136px;
+  display: flex;
+  justify-content: end;
+}
+
+.liAboutUs {
+  width: 116px;
+  display: flex;
+  justify-content: end;
+}
+
+
+a {
+  color: #FF6060;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+}
+
+a:hover, .isActive {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+  }
+}
