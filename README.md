@@ -56,3 +56,4 @@ $primary: #FF6060;
 $grey: #C4C4C4;
 $white: #F7F7F7;
 $lightGrey: #E3E3E3;
+#E5E5E5

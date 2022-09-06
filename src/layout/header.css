@@ -1,14 +1,14 @@
 
 header {
-  background-color: antiquewhite;
   display: flex;
-  width: 1240px;
-  margin: 40px auto;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1240px;
+  margin: 40px 21px;
 }
 
-.logo {
+.logoHeader {
   width: 210px;
   height: 68px;
 }
@@ -45,12 +45,12 @@ a {
   font-weight: 500;
 }
 
-a:hover, .active {
+a:hover, .isActive {
   text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-  .header {
+  header {
     align-items: center;
     flex-direction: column;
   }
