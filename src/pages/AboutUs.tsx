@@ -1,10 +1,13 @@
 import React, { FC } from "react";
-import { Header } from "../layout/Header";
+import { NavBar } from "../layout/NavBar";
+import { Footer } from "../layout/Footer";
+import "./aboutUs.css";
 
 const AboutUs: FC = () => {
   return (
-    <div className="container">
-      <Header />
+    <div className="containerAboutUs">
+      <NavBar />
+      <Footer />
     </div>
   );
 };
