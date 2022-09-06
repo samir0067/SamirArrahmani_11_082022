@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import RED_LOGO from "../assets/RED_LOGO.svg";
 import { NavLink } from "react-router-dom";
-import "./header.css";
+import "./navBar.css";
 
-export const Header: FC = () => {
+export const NavBar: FC = () => {
   return (
     <header>
-      <img className="logoHeader" src={RED_LOGO} alt="logo" />
+      <img className="logoNavBar" src={RED_LOGO} alt="logo" />
       <nav>
         <ul>
           <li className="liHome">
