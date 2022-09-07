@@ -5,7 +5,7 @@ header {
   justify-content: space-between;
   width: 100%;
   max-width: 1240px;
-  margin: 40px 21px;
+  margin: 40px 0 20px 0;
 }
 
 .logoNavBar {
@@ -24,19 +24,20 @@ nav > ul {
   width: 100%;
   justify-content: space-between;
 }
+nav > ul > li {
+  display: flex;
+  justify-content: end;
+}
+
+
 
 .liHome {
   width: 136px;
-  display: flex;
-  justify-content: end;
 }
 
 .liAboutUs {
   width: 116px;
-  display: flex;
-  justify-content: end;
 }
-
 
 a {
   color: #FF6060;
@@ -51,7 +52,20 @@ a:hover, .isActive {
 
 @media (max-width: 768px) {
   header {
-    align-items: center;
-    flex-direction: column;
+    margin: 40px 0 16px 0;
+  }
+
+  .logoNavBar {
+    width: 145px;
+    height: 47px;
+  }
+
+  nav {
+    width: 140px;
+  }
+
+  a {
+    font-size: 12px;
+    line-height: 17px;
   }
 }
