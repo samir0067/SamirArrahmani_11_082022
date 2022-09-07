@@ -23,7 +23,7 @@ export function useFetchAll(url: string) {
       }
     }
 
-    fetchAllData();
+    fetchAllData().then();
   }, [url]);
 
   return { isLoading, allData, error };
