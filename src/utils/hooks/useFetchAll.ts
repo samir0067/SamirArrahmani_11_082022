@@ -10,7 +10,7 @@ export function useFetchAll(url: string) {
     if (!url) return;
 
     setLoading(true);
-    async function fetchData() {
+    async function fetchAllData() {
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -23,7 +23,7 @@ export function useFetchAll(url: string) {
       }
     }
 
-    fetchData();
+    fetchAllData();
   }, [url]);
 
   return { isLoading, allData, error };
