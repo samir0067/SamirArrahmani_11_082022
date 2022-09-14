@@ -16,8 +16,8 @@ export function useFetchAll(url: string) {
         const data = await response.json();
         setAllData(data);
       } catch (error) {
-        console.log("error useFetchAll =>", error);
         setError(true);
+        throw new Error("error useFetchAll =>" + error);
       } finally {
         setLoading(false);
       }
