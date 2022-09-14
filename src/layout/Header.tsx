@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import "./header.css";
 
 type HeaderProps = {
-  image: React.ReactNode;
+  image: string;
   title?: string;
 };
 
@@ -14,7 +14,7 @@ export const Header: FC<HeaderProps> = ({ title, image }) => {
           <h2>{title}</h2>
         </div>
       )}
-      <div className="imageContainer">{image}</div>
+      <img className="imgHeader" src={image} alt="paysage urbain" />
     </div>
   );
 };

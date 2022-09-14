@@ -18,7 +18,7 @@ const Home: FC = () => {
   return (
     <Fragment>
       <NavBar />
-      <Header title="Chez vous, partout et ailleurs" image={<img src={imageBackHeadHome} alt="paysage urbain" />} />
+      <Header title="Chez vous, partout et ailleurs" image={imageBackHeadHome} />
       <main className="containerHome">
         <section>
           <ul className="apartmentContainer">
@@ -32,8 +32,8 @@ const Home: FC = () => {
             ))}
           </ul>
         </section>
-        <Footer />
       </main>
+      <Footer />
     </Fragment>
   );
 };

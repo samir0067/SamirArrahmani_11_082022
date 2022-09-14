@@ -1,5 +1,5 @@
 .headerContainer {
-  width: 100%;
+  width: 96%;
   height: 223px;
   max-width: 1240px;
   margin-left: auto;
@@ -7,9 +7,12 @@
   border-radius: 25px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .titleContainer {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,22 +29,15 @@
   font-weight: 500;
 }
 
-.imageContainer {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.imageContainer > img {
+.imgHeader {
   filter: brightness(70%);
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .headerContainer {
     border-radius: 10px;
     height: 138px;
-    /*width: 95%;*/
   }
 
   .titleContainer > h2 {
