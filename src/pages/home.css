@@ -4,3 +4,29 @@
   align-items: center;
   width: 100%;
 }
+
+section {
+  max-width: 1240px;
+  margin-top: 43px;
+}
+
+.apartmentContainer {
+  gap: 50px;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: #7a7a7a;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-top: 0;
+  }
+
+  .apartmentContainer {
+    gap: 20px;
+  }
+}

@@ -5,7 +5,9 @@ header {
   justify-content: space-between;
   width: 100%;
   max-width: 1240px;
-  margin: 40px 20px 20px 20px;
+  margin: 40px auto 30px auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .logoNavBar {
@@ -24,11 +26,11 @@ nav > ul {
   width: 100%;
   justify-content: space-between;
 }
+
 nav > ul > li {
   display: flex;
   justify-content: end;
 }
-
 
 
 .liHome {
@@ -53,6 +55,7 @@ a:hover, .isActive {
 @media (max-width: 768px) {
   header {
     margin: 40px 0 16px 0;
+    /*width: 95%;*/
   }
 
   .logoNavBar {
