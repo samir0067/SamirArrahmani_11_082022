@@ -23,10 +23,10 @@ const Home: FC = () => {
         <section>
           <ul className="apartmentContainer">
             {isLoading && <h1>Chargement en cour</h1>}
-            {allData.map((apartment, index) => (
+            {allData.map((apartment) => (
               <li key={apartment.id}>
                 <Link to={`/appartement/${apartment.id}`}>
-                  <ApartmentCard picture={apartment.cover} title={apartment.title} id={index} />
+                  <ApartmentCard picture={apartment.cover} title={apartment.title} />
                 </Link>
               </li>
             ))}
