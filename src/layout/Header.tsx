@@ -2,19 +2,20 @@ import React, { FC } from "react";
 import "./header.css";
 
 type HeaderProps = {
-  image: string;
   title?: string;
+  className?: string;
+  content?: React.ReactNode;
 };
 
-export const Header: FC<HeaderProps> = ({ title, image }) => {
+export const Header: FC<HeaderProps> = ({ title, className, content }) => {
   return (
-    <div className="headerContainer">
+    <div className={`headerContainer ${className}`}>
       {title && (
         <div className="titleContainer">
           <h2>{title}</h2>
         </div>
       )}
-      <img className="imgHeader" src={image} alt="paysage urbain" />
+      {content && content}
     </div>
   );
 };

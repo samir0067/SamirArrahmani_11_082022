@@ -45,6 +45,7 @@
 @media (max-width: 768px) {
   .apartmentCard {
     height: 255px;
+    border-radius: 10px;
     width: 100%;
   }
 

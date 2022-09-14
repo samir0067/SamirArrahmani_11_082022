@@ -1,15 +1,23 @@
-.containerHome {
+.homeMain {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 96%;
+  max-width: 1240px;
+  margin-top: 43px;
   margin-left: auto;
   margin-right: auto;
 }
 
-section {
-  max-width: 1240px;
-  margin-top: 43px;
+.headerHomeLaptop {
+  height: 223px;
+  border-radius: 25px;
+}
+
+.headerHomeMobile {
+  height: 111px;
+  border-radius: 10px;
+
 }
 
 .apartmentContainer {
@@ -26,7 +34,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  section {
+  .homeMain {
     margin-top: 0;
   }
 
