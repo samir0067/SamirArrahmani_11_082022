@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { ApartmentDataProps } from "../interface";
 
-export function useFetchById(url: string, id?: string) {
-  const [data, setData] = useState<ApartmentDataProps>({} as ApartmentDataProps);
+export function useFetchById(url: string, id: string) {
+  const [data, setData] = useState<ApartmentDataProps>();
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
