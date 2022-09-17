@@ -1,0 +1,61 @@
+.carousel {
+  width: 100%;
+  transition: transform 400ms linear;
+}
+
+.carousel > ul {
+  display: flex;
+}
+
+.carouselPicture {
+  width: 100%;
+}
+
+.counter {
+  position: absolute;
+  bottom: 25px;
+}
+
+.counter > p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: white;
+}
+
+.arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.arrowNext, .arrowPrevious {
+  background-image: url(../assets/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 79px;
+  width: 46px;
+
+  cursor: pointer;
+}
+
+.arrowPrevious {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .counter {
+    display: none;
+  }
+
+  .arrowNext, .arrowPrevious {
+    background-image: url(../assets/smallArrow.svg);
+    height: 19px;
+    width: 11px;
+
+  }
+}
