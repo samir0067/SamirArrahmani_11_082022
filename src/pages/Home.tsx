@@ -10,7 +10,7 @@ import { useFetchAll } from "../utils/hooks/useFetchAll";
 import { useMatchMedia } from "../utils/hooks/useMatchMedia";
 
 const Home: FC = () => {
-  const downMd = useMatchMedia();
+  const { downSm } = useMatchMedia();
   const { allData, isLoading, error } = useFetchAll(`/data.json`);
 
   if (error) {
@@ -21,7 +21,7 @@ const Home: FC = () => {
     <Fragment>
       <NavBar />
       <Header
-        className={downMd ? "headerHomeMobile" : "headerHomeLaptop"}
+        className={downSm ? "headerHomeMobile" : "headerHomeLaptop"}
         title="Chez vous, partout et ailleurs"
         content={<img className="imgHeader" src={imageBackHeadHome} alt="paysage urbain" />}
       />
