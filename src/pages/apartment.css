@@ -1,6 +1,9 @@
-.containerAboutUs {
+.apartmentMain {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  width: 96%;
+  max-width: 1240px;
+  margin-top: 43px;
+  margin-left: auto;
+  margin-right: auto;
 }
