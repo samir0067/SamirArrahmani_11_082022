@@ -10,5 +10,5 @@ export const useMatchMedia = () => {
       setDownSm(false);
     }
   });
-  return downSm;
+  return { downSm };
 };
