@@ -7,3 +7,113 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.headerApartmentLaptop {
+  height: 415px;
+  border-radius: 25px;
+}
+
+.headerApartmentMobile {
+  height: 255px;
+  border-radius: 10px;
+}
+
+.information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apartmentInfo > h2 {
+  font-size: 36px;
+  font-weight: 500;
+  text-align: left;
+  color: #FF6060;
+}
+
+.apartmentInfo > h4 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+  color: #FF6060;
+}
+
+.tagsInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.tagsInfo > li {
+  width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: #FF6060;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.informationHost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.hostDescription {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+}
+
+.hostDescription > h4 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+  color: #FF6060;
+}
+
+.hostPicture {
+  width: 64px;
+  height: 64px;
+}
+
+.hostPicture > img {
+  width: auto;
+  height: 100%;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .information {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .apartmentInfo {
+    width: 100%;
+  }
+
+  .tagsInfo {
+    margin: 25px 0;
+  }
+
+  .informationHost {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hostDescription {
+    width: 25%;
+    justify-content: end;
+  }
+}
