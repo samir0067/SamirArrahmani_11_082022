@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
 import "./dropdown.css";
 
-interface DropdownProps {
+type DropdownProps = {
   title: string;
   content?: JSX.Element | JSX.Element[];
   width?: string;
-}
+};
 
 export const Dropdown: FC<DropdownProps> = ({ content, width, title }) => {
   const [open, setOpen] = useState<boolean>(false);

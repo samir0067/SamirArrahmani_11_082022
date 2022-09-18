@@ -17,7 +17,6 @@
 .headerHomeMobile {
   height: 111px;
   border-radius: 10px;
-
 }
 
 .apartmentContainer {
@@ -25,7 +24,6 @@
   padding: 30px;
   border-radius: 25px;
   background-color: #F6F6F6;
-;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
