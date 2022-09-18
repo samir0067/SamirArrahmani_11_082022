@@ -55,10 +55,14 @@ const Apartment: FC = () => {
           </div>
         </section>
         <section className="properties">
-          <Dropdown title="Description" width={downMd ? "100%" : "47%"} content={<p>{data?.description}</p>} />
+          <Dropdown
+            title="Description"
+            className={downMd ? "dropdownMobile" : "dropdownLaptop"}
+            content={<p>{data?.description}</p>}
+          />
           <Dropdown
             title="Équipements"
-            width={downMd ? "100%" : "47%"}
+            className={downMd ? "dropdownMobile" : "dropdownLaptop"}
             content={data?.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}

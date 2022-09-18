@@ -3,6 +3,14 @@
   max-width: 1024px;
 }
 
+.dropdownLaptop {
+  width: 47%;
+}
+
+.dropdownMobile {
+  width: 100%;
+}
+
 .dropdownTitle {
   position: absolute;
   width: 100%;

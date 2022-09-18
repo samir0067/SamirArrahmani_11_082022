@@ -4,10 +4,10 @@ import "./dropdown.css";
 type DropdownProps = {
   title: string;
   content?: JSX.Element | JSX.Element[];
-  width?: string;
+  className?: string;
 };
 
-export const Dropdown: FC<DropdownProps> = ({ content, width, title }) => {
+export const Dropdown: FC<DropdownProps> = ({ content, className, title }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const expanding = () => {
@@ -15,7 +15,7 @@ export const Dropdown: FC<DropdownProps> = ({ content, width, title }) => {
   };
 
   return (
-    <div className={open ? "dropdown isOpen" : "dropdown"} style={{ width: width }} onClick={expanding}>
+    <div className={open ? `dropdown ${className} isOpen` : `dropdown ${className}`} onClick={expanding}>
       <div className="dropdownTitle">
         <h2>{title}</h2>
       </div>
@@ -24,8 +24,4 @@ export const Dropdown: FC<DropdownProps> = ({ content, width, title }) => {
       </div>
     </div>
   );
-};
-
-Dropdown.defaultProps = {
-  width: "100%",
 };
