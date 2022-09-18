@@ -12,7 +12,7 @@ import "./apartment.css";
 
 const Apartment: FC = () => {
   const navigate = useNavigate();
-  const { downSm, downMd } = useMatchMedia();
+  const { downSm } = useMatchMedia();
   const { appartementId } = useParams<string>();
   const { data, isLoading, error } = useFetchById(`/data.json`, appartementId!);
 
@@ -55,14 +55,10 @@ const Apartment: FC = () => {
           </div>
         </section>
         <section className="properties">
-          <Dropdown
-            title="Description"
-            className={downMd ? "dropdownMobile" : "dropdownLaptop"}
-            content={<p>{data?.description}</p>}
-          />
+          <Dropdown title="Description" className="dropdownApartment" content={<p>{data?.description}</p>} />
           <Dropdown
             title="Équipements"
-            className={downMd ? "dropdownMobile" : "dropdownLaptop"}
+            className="dropdownApartment"
             content={data?.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}

@@ -44,16 +44,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React Router documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-                                                                               
-## Info media breakpoints and colors: 
-
-mobile: 375px 
-tablet: 768px 
-laptop: 1240px 
-desktop: 1440px
-
-$primary: #FF6060;
-$grey: #C4C4C4;
-$white: #F7F7F7;
-$lightGrey: #E3E3E3;
-#E5E5E5

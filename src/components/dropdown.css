@@ -3,18 +3,10 @@
   max-width: 1024px;
 }
 
-.dropdownLaptop {
-  width: 47%;
-}
-
-.dropdownMobile {
-  width: 100%;
-}
-
 .dropdownTitle {
   position: absolute;
   width: 100%;
-  height: 52px;
+  height: 47px;
   border-radius: 10px;
   background-color: #FF6060;
   padding: 0 20px;
@@ -24,7 +16,7 @@
 .dropdownTitle > h2 {
   font-size: 18px;
   font-weight: 500;
-  line-height: 50px;
+  line-height: 47px;
   text-align: left;
   color: white;
 }
@@ -52,7 +44,7 @@
   padding: 0 20px;
   background: #F7F7F7;
   border-radius: 5px;
-  max-height: 52px;
+  max-height: 47px;
   transition: all 300ms linear;
   overflow: hidden;
 }
