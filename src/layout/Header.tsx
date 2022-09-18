@@ -9,13 +9,13 @@ type HeaderProps = {
 
 export const Header: FC<HeaderProps> = ({ title, className, content }) => {
   return (
-    <div className={`headerContainer ${className}`}>
+    <header className={className}>
       {title && (
         <div className="titleContainer">
           <h2>{title}</h2>
         </div>
       )}
       {content && content}
-    </div>
+    </header>
   );
 };

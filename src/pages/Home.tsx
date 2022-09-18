@@ -20,12 +20,12 @@ const Home: FC = () => {
   return (
     <Fragment>
       <NavBar />
-      <Header
-        className={downSm ? "headerHomeMobile" : "headerHomeLaptop"}
-        title="Chez vous, partout et ailleurs"
-        content={<img className="imgHeader" src={imageBackHeadHome} alt="paysage urbain" />}
-      />
       <main className="homeMain">
+        <Header
+          className={downSm ? "headerHomeMobile" : "headerHomeLaptop"}
+          title="Chez vous, partout et ailleurs"
+          content={<img className="imgHeader" src={imageBackHeadHome} alt="paysage urbain" />}
+        />
         <ul className="apartmentContainer">
           {isLoading && <h1>Chargement en cour</h1>}
           {allData.map((apartment) => (

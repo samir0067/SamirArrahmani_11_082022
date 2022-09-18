@@ -5,7 +5,7 @@ import "./navBar.css";
 
 export const NavBar: FC = () => {
   return (
-    <header>
+    <div className="navBar">
       <img className="logoNavBar" src={RED_LOGO} alt="logo" />
       <nav>
         <ul>
@@ -21,6 +21,6 @@ export const NavBar: FC = () => {
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   );
 };

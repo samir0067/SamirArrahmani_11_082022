@@ -1,5 +1,5 @@
 
-header {
+.navBar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -53,9 +53,8 @@ a:hover, .isActive {
 }
 
 @media (max-width: 768px) {
-  header {
+  .navBar {
     margin: 40px 0 16px 0;
-    /*width: 95%;*/
   }
 
   .logoNavBar {
