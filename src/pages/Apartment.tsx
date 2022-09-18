@@ -3,15 +3,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useFetchById } from "../utils/hooks/useFetchById";
 import { Footer } from "../layout/Footer";
 import { NavBar } from "../layout/NavBar";
-import { Carousel } from "../components/Carousel";
 import { Header } from "../layout/Header";
 import { useMatchMedia } from "../utils/hooks/useMatchMedia";
-import Notes from "../components/Notes";
+import { Carousel } from "../components/Carousel";
+import { Dropdown } from "../components/Dropdown";
+import { Notes } from "../components/Notes";
 import "./apartment.css";
 
 const Apartment: FC = () => {
   const navigate = useNavigate();
-  const { downSm } = useMatchMedia();
+  const { downSm, downMd } = useMatchMedia();
   const { appartementId } = useParams<string>();
   const { data, isLoading, error } = useFetchById(`/data.json`, appartementId!);
 
@@ -28,11 +29,11 @@ const Apartment: FC = () => {
   return (
     <Fragment>
       <NavBar />
-      <Header
-        className={downSm ? "headerApartmentMobile" : "headerApartmentLaptop"}
-        content={<Carousel pictures={data?.pictures} title={data?.title} />}
-      />
       <main className="apartmentMain">
+        <Header
+          className={downSm ? "headerApartmentMobile" : "headerApartmentLaptop"}
+          content={<Carousel pictures={data?.pictures} title={data?.title} />}
+        />
         <section className="information">
           <div className="apartmentInfo">
             <h2>{data?.title}</h2>
@@ -52,6 +53,16 @@ const Apartment: FC = () => {
             </div>
             {data?.rating && <Notes rating={data.rating} />}
           </div>
+        </section>
+        <section className="properties">
+          <Dropdown title="Description" width={downMd ? "100%" : "47%"} content={<p>{data?.description}</p>} />
+          <Dropdown
+            title="Équipements"
+            width={downMd ? "100%" : "47%"}
+            content={data?.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          />
         </section>
       </main>
       <Footer />

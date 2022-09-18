@@ -92,6 +92,12 @@
   border-radius: 50%;
 }
 
+.properties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
 @media (max-width: 768px) {
   .apartmentMain {
     gap: 15px;
@@ -115,10 +121,24 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0;
   }
 
   .hostDescription {
-    width: 25%;
+    width: 20%;
     justify-content: end;
+  }
+
+  .hostDescription > h4 {
+    font-size: 12px;
+  }
+
+  .hostPicture {
+    height: 32px;
+    width: 32px;
+  }
+
+  .properties {
+    gap: 30px;
   }
 }

@@ -4,7 +4,7 @@ import "./header.css";
 type HeaderProps = {
   title?: string;
   className?: string;
-  content?: React.ReactNode;
+  content?: JSX.Element;
 };
 
 export const Header: FC<HeaderProps> = ({ title, className, content }) => {
