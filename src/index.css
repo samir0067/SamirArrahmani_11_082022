@@ -13,10 +13,25 @@ body {
   margin-right: auto;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 ul {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
+}
+
+.errorFetch {
+  background-color: #FF6060;
+  text-align: center;
+  font-size: 30px;
+  height: 100vh;
+  padding: 50px 10px;
 }

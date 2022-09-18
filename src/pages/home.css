@@ -1,6 +1,43 @@
-.container {
+.homeMain {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.headerHomeLaptop {
+  height: 223px;
+  border-radius: 25px;
+}
+
+.headerHomeMobile {
+  height: 111px;
+  border-radius: 10px;
+}
+
+.apartmentContainer {
+  gap: 50px;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: #F6F6F6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+  .homeMain {
+    gap: 15px;
+  }
+
+  .apartmentContainer {
+    gap: 20px;
+    padding: 15px 0;
+  }
 }

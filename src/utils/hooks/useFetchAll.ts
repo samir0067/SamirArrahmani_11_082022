@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { ApartmentDataProps } from "../interface";
 
-export function useFetch(url: string) {
-  const [data, setData] = useState({});
+export function useFetchAll(url: string) {
+  const [allData, setAllData] = useState<ApartmentDataProps[]>([]);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -9,22 +10,21 @@ export function useFetch(url: string) {
     if (!url) return;
 
     setLoading(true);
-
-    async function fetchData() {
+    async function fetchAllData() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setData(data);
-      } catch (err) {
-        console.log(err);
+        setAllData(data);
+      } catch (error) {
         setError(true);
+        throw new Error("error useFetchAll =>" + error);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchData();
+    fetchAllData().then();
   }, [url]);
 
-  return { isLoading, data, error };
+  return { isLoading, allData, error };
 }

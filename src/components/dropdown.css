@@ -1,0 +1,91 @@
+.dropdown {
+  position: relative;
+  max-width: 1024px;
+}
+
+.dropdownLaptop {
+  width: 47%;
+}
+
+.dropdownMobile {
+  width: 100%;
+}
+
+.dropdownTitle {
+  position: absolute;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #FF6060;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.dropdownTitle > h2 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  color: white;
+}
+
+.dropdownTitle::after {
+  content: "";
+  background-image: url(../assets/arrowDown.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  transition: transform 250ms linear;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 100%;
+  width: 30px;
+}
+
+.isOpen > .dropdownTitle::after {
+  transform: rotate(0);
+}
+
+.dropdownContainer {
+  color: #FF6060;
+  padding: 0 20px;
+  background: #F7F7F7;
+  border-radius: 5px;
+  max-height: 52px;
+  transition: all 300ms linear;
+  overflow: hidden;
+}
+
+.isOpen > .dropdownContainer {
+  padding: 70px 20px 20px 20px;
+  max-height: 350px;
+}
+
+@media (max-width: 768px) {
+  .dropdownTitle {
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 12px;
+  }
+
+  .dropdownTitle > h2 {
+    font-size: 13px;
+    line-height: 29px;
+  }
+
+  .dropdownTitle::after {
+    background-image: url(../assets/samllArrowDown.svg);
+    right: 7px;
+  }
+
+  .dropdownContainer {
+    padding: 0 12px;
+    max-height: 30px;
+  }
+
+  .isOpen > .dropdownContainer {
+    padding: 50px 12px 12px 12px;
+    max-height: 300px;
+  }
+}
