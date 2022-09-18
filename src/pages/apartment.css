@@ -98,6 +98,16 @@
   gap: 50px;
 }
 
+.dropdownApartment {
+  width: 47%;
+}
+
+@media (max-width: 900px) {
+  .dropdownApartment {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .apartmentMain {
     gap: 15px;
