@@ -6,7 +6,7 @@ type StarsProps = {
   rating: number;
 };
 
-const Stars: FC<StarsProps> = ({ rating = 0 }) => {
+const Notes: FC<StarsProps> = ({ rating = 0 }) => {
   const { downSm } = useMatchMedia();
   const stars: any[] = [];
 
@@ -21,4 +21,4 @@ const Stars: FC<StarsProps> = ({ rating = 0 }) => {
   return <div style={{ display: "flex", gap: downSm ? 5 : 10 }}>{stars}</div>;
 };
 
-export default Stars;
+export default Notes;
