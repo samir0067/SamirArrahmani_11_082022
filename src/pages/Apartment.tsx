@@ -6,7 +6,7 @@ import { NavBar } from "../layout/NavBar";
 import { Carousel } from "../components/Carousel";
 import { Header } from "../layout/Header";
 import { useMatchMedia } from "../utils/hooks/useMatchMedia";
-import Stars from "../components/Stars";
+import Notes from "../components/Notes";
 import "./apartment.css";
 
 const Apartment: FC = () => {
@@ -50,7 +50,7 @@ const Apartment: FC = () => {
                 <img src={data?.host.picture} alt={data?.host.name} />
               </div>
             </div>
-            {data?.rating && <Stars rating={data.rating} />}
+            {data?.rating && <Notes rating={data.rating} />}
           </div>
         </section>
       </main>
