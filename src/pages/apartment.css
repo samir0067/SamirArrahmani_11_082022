@@ -1,11 +1,12 @@
 .apartmentMain {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  width: 96%;
+  width: 100%;
   max-width: 1240px;
-  margin-top: 43px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 30px;
 }
 
 .headerApartmentLaptop {
@@ -41,7 +42,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 
 .tagsInfo > li {
@@ -92,6 +93,10 @@
 }
 
 @media (max-width: 768px) {
+  .apartmentMain {
+    gap: 15px;
+  }
+
   .information {
     flex-direction: column;
     align-items: start;
@@ -102,7 +107,7 @@
   }
 
   .tagsInfo {
-    margin: 25px 0;
+    margin-top: 15px;
   }
 
   .informationHost {
