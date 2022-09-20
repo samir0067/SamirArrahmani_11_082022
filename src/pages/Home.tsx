@@ -7,10 +7,8 @@ import "./home.css";
 import { ApartmentCard } from "../components/ApartmentCard";
 import { Link } from "react-router-dom";
 import { useFetchAll } from "../utils/hooks/useFetchAll";
-import { useMatchMedia } from "../utils/hooks/useMatchMedia";
 
 const Home: FC = () => {
-  const { downSm } = useMatchMedia();
   const { allData, isLoading, error } = useFetchAll(`/data.json`);
 
   if (error) {
@@ -22,7 +20,7 @@ const Home: FC = () => {
       <NavBar />
       <main className="homeMain">
         <Header
-          className={downSm ? "headerHomeMobile" : "headerHomeLaptop"}
+          className="headerHome"
           title="Chez vous, partout et ailleurs"
           content={<img className="imgHeader" src={imageBackHeadHome} alt="paysage urbain" />}
         />

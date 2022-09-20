@@ -9,14 +9,9 @@
   gap: 30px;
 }
 
-.headerHomeLaptop {
+.headerHome {
   height: 223px;
   border-radius: 25px;
-}
-
-.headerHomeMobile {
-  height: 111px;
-  border-radius: 10px;
 }
 
 .apartmentContainer {
@@ -34,6 +29,11 @@
 @media (max-width: 768px) {
   .homeMain {
     gap: 15px;
+  }
+
+  .headerHome {
+    height: 111px;
+    border-radius: 10px;
   }
 
   .apartmentContainer {
