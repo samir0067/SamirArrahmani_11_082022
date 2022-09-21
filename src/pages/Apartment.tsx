@@ -4,7 +4,6 @@ import { useFetchById } from "../utils/hooks/useFetchById";
 import { Footer } from "../layout/Footer";
 import { NavBar } from "../layout/NavBar";
 import { Header } from "../layout/Header";
-import { useMatchMedia } from "../utils/hooks/useMatchMedia";
 import { Carousel } from "../components/Carousel";
 import { Dropdown } from "../components/Dropdown";
 import { Notes } from "../components/Notes";
@@ -12,7 +11,6 @@ import "./apartment.css";
 
 const Apartment: FC = () => {
   const navigate = useNavigate();
-  const { downSm } = useMatchMedia();
   const { appartementId } = useParams<string>();
   const { data, isLoading, error } = useFetchById(`/data.json`, appartementId!);
 
@@ -30,10 +28,7 @@ const Apartment: FC = () => {
     <Fragment>
       <NavBar />
       <main className="apartmentMain">
-        <Header
-          className={downSm ? "headerApartmentMobile" : "headerApartmentLaptop"}
-          content={<Carousel pictures={data?.pictures} title={data?.title} />}
-        />
+        <Header className="headerApartment" content={<Carousel pictures={data?.pictures} title={data?.title} />} />
         <section className="information">
           <div className="apartmentInfo">
             <h2>{data?.title}</h2>
