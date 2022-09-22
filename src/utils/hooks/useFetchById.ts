@@ -29,25 +29,3 @@ export function useFetchById(url: string, id: string) {
 
   return { isLoading, data, error };
 }
-
-//import { ApartmentDataProps } from "../utils/interface";
-//
-// const findById = async (id: string): Promise<ApartmentDataProps> => {
-//   let response: any;
-//   let allData: ApartmentDataProps[];
-//   let data: ApartmentDataProps;
-//
-//   try {
-//     response = await fetch("/data.json");
-//     allData = await response.json();
-//     data = allData.filter((housing) => housing.id === id)[0];
-//   } catch (err: any) {
-//     throw new Error("Erreur lors de la requete API :" + err);
-//   }
-//
-//   return data;
-// };
-//
-// const HousingService = { findById };
-//
-// export default HousingService;
